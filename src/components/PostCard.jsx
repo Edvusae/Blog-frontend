@@ -1,25 +1,27 @@
-// src/components/PostCard.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import data from './data/post.js'; 
 
-const PostCard = ({ post }) => {
+function PostCard() {
+  const [posts, setPosts] = useState(data); // Initialize state with your post data
+
   return (
-    <div className="card mb-4">
-      <div className="card-body">
-        <h5 className="card-title">{post.title}</h5>
-        <h6 className="card-subtitle mb-2 text-muted">
-          By {post.author} on {post.date}
-        </h6>
-        <p className="card-text">
-          {post.content.substring(0, 100)}... {/* Display a short snippet */}
-        </p>
-        <Link to={`/posts/${post.id}`} className="btn btn-primary">
-          Read More
-        </Link>
-      </div>
+    <div className="post-container">
+      {posts.map(post => (
+        <div key={post.id} className="post-card">
+          <img src={post.image} alt={post.title} className="post-image" />
+          <div className="post-content">
+            <h2 className="post-title">{post.title}</h2>
+            <p className="post-body">{post.body}</p>
+            <div className="post-meta">
+              <span className="post-author">{post.author}</span>
+              <span className="post-date">{post.date}</span>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
 export default PostCard;
