@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import data from './data/post.js'; 
 
 function PostCard() {
-  const [posts, setPosts] = useState(data); // Initialize state with your post data
+  // Using useState to manage posts state
+  const [posts, setPosts] = useState(data);
 
   return (
+    // Rendering the post cards
     <div className="post-container">
       {posts.map(post => (
         <div key={post.id} className="post-card">
