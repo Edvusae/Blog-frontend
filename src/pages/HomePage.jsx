@@ -1,4 +1,4 @@
-import { data } from "react-router-dom";
+import { data } from 'src/data/posts.js';
 import PostCard from "../components/PostCard";
 import React from "react";
 
