@@ -1,4 +1,4 @@
-import { data } from 'src/data/posts.js';
+import data  from 'src/data/posts.js';
 import PostCard from "../components/PostCard";
 import React from "react";
 
