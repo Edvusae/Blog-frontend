@@ -1,11 +1,10 @@
-// src/App.jsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HomePage from './pages/HomePage';
-import posts from './data/posts';
+import HomePage from '../pages/HomePage';
+import PostPage from '../pages/PostPage';
+import posts from '../data/posts.js';
 import './App.css';
-import CreatePostPage from './pages/CreatePostPage';
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/create" element={<CreatePostPage />} />
+          <Route path="/posts/:id" element={<PostPage />} />
         </Routes>
       </div>
     </div>

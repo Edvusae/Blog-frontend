@@ -1,10 +1,8 @@
-import data  from 'src/data/posts.js';
+import posts from '../data/posts.js';
 import PostCard from "../components/PostCard";
 import React from "react";
 
 function HomePage() {
-  const posts = data;
-
   return (
     <div>
       <h1>Home Page</h1>

@@ -1,4 +1,3 @@
-// src/data/posts.js
 const posts = [
   {
     id: 1,
@@ -17,4 +16,4 @@ const posts = [
   // Add more posts here
 ];
 
-export default posts;
+export { posts };
