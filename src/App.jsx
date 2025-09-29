@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';   // CORRECTED path
-import HomePage from './pages/HomePage';     // CORRECTED path
+import HomePage from '.';     // CORRECTED path
 import PostPage from './pages/PostPage';     // CORRECTED path
 import './App.css'; 
 
