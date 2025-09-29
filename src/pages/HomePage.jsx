@@ -1,5 +1,5 @@
-import posts from '../data/posts.js';
-import PostCard from '../components/PostCard.jsx';
+import posts from './data/posts.js';
+import PostCard from './components/PostCard.jsx';
 
 
 function HomePage() {
