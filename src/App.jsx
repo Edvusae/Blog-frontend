@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';   // CORRECTED path
-import HomePage from '.';     // CORRECTED path
-import PostPage from './pages/PostPage';     // CORRECTED path
+import HomePage from './components/pages/HomePage';   // FIXED: Uses ./
+import Header from './components/Header';       // FIXED: Uses ./
+import PostPage from './pages/PostPage';     // FIXED: Uses ./
 import './App.css'; 
 
 function App() {
