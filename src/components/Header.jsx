@@ -1,20 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // <-- ADD THIS LINE
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header>
-      {/* Blog Title/Logo */}
-      <h1>My Awesome Blog</h1>
-
-      {/* Navigation Links */}
-      <nav>
-        {/* Use the Link component instead of <a> */}
-        <Link to="/">Home</Link>
-        <Link to="/create">Create Post</Link>
-        <Link to="/about">About</Link>
-      </nav>
-    </header>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        {/* Link component for the Home/Blog Title */}
+        <Link className="navbar-brand" to="/">
+          My Awesome Frontend Blog
+        </Link>
+        
+        {/* You can add navigation links here if needed */}
+        {/* <div className="collapse navbar-collapse">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+          </ul>
+        </div> */}
+      </div>
+    </nav>
   );
 }
 
