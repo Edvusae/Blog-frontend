@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // We'll need this soon!
+import { useNavigate } from 'react-router-dom';
 
 function CreatePostPage() {
   // These state variables will store the title and content from the form

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './components/pages/HomePage';   // FIXED: Uses ./
-import Header from './components/Header';       // FIXED: Uses ./
-import PostPage from './pages/PostPage';     // FIXED: Uses ./
+import Header from './components/Header';
+import HomePage from './src/components/pages/HomePage';
+import PostPage from './pages/PostPage';
 import './App.css'; 
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import posts from '../data/posts'; // Your mock data
+import posts from '../data/posts';
 
 function PostPage() {
   // 1. Get the ID from the URL parameter

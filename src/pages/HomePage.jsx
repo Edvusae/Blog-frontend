@@ -1,6 +1,5 @@
-import React from 'react';
-import posts from '../data/posts'; // Your mock data
-import PostCard from '../components/PostCard'; // Your reusable card component
+import posts from './data/posts';
+import PostCard from './components/PostCard';
 
 function HomePage() {
   return (

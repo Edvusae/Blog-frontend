@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -9,9 +8,8 @@ function Header() {
         <Link className="navbar-brand" to="/">
           My Awesome Frontend Blog
         </Link>
-        
-        {/* You can add navigation links here if needed */}
-        {/* <div className="collapse navbar-collapse">
+        {/* You can adding navigation links here if needed */}
+        { <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/about">
@@ -19,7 +17,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-        </div> */}
+        </div> }
       </div>
     </nav>
   );
