@@ -7,7 +7,7 @@ export default defineConfig({
   
   // ⭐️ ADD THIS CONFIGURATION BLOCK ⭐️
   test: {
-    globals: true, // Allows using test functions (like 'it' and 'expect') globally
+    globals: true,
     environment: 'jsdom', // Simulates a browser environment
     setupFiles: './src/setupTests.js', // File to set up Jest-DOM matchers
     css: true, // Handles CSS imports gracefully (important for Bootstrap)
