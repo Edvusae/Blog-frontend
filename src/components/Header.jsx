@@ -13,6 +13,7 @@ function Header() {
         { <div className="collapse navbar-collapse">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
+              {/* Link component for the About page */}
               <Link className="nav-link" to="/about">
                 About
               </Link>

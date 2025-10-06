@@ -1,3 +1,4 @@
+{/* This file contains an array of blog post objects for use in the application */}
 const posts = [
   {
     id: 1,
@@ -29,4 +30,5 @@ const posts = [
   }
 ];
 
+{/* Exporting the posts array for use in other parts of the application */ }
 export { posts };
