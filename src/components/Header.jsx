@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function Header() {
+  {/* This component renders the navigation bar with a link to the home page */}
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
@@ -23,4 +24,5 @@ function Header() {
   );
 }
 
+{/* Exporting the Header component as the default export of this module */}
 export default Header;
