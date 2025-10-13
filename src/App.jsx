@@ -1,21 +1,19 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HomePage from './src/components/pages/HomePage';
-import PostPage from './pages/PostPage';
-import './App.css'; 
+import HomePage from './components/pages/HomePage';
+import PostPage from './components/pages/PostPage'; // Adjusted the import path for consistency
+import './App.css';
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/posts/:id" element={<PostPage />} />
-        </Routes>
-      </div>
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Header />
+    <main className="container">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts/:id" element={<PostPage />} />
+      </Routes>
+    </main>
+  </div>
+);
 
 export default App;
