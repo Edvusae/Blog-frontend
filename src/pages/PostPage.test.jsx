@@ -49,11 +49,11 @@ describe('PostPage Component Tests', () => {
 
     render(<PostPage />);
     
-    // Assertion: Check if the "Post Not Found!" heading is on the screen
+    // Check for the "Post Not Found" message
     const notFoundMessage = screen.getByRole('heading', { name: /Post Not Found!/i });
     expect(notFoundMessage).toBeInTheDocument();
     
-    // Double-check: Make sure no real post content is accidentally rendered
+    // Additionally, ensure that no post titles are displayed
     expect(screen.queryByText(posts[0].title)).not.toBeInTheDocument();
   });
 });
