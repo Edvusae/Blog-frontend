@@ -16,8 +16,7 @@ describe('Header Component Tests', () => {
 
   it('1. Renders the correct blog title text', () => {
     setup();
-    // Use getByText to find the element containing the title text
-    // The title should match the text you used in your Header.jsx file
+    // Get the element by its text content
     const titleElement = screen.getByText(/My Awesome Frontend Blog/i); 
     
     // Assert that the element is visible in the document
