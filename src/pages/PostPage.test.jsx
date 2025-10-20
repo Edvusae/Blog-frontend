@@ -33,13 +33,13 @@ describe('PostPage Component Tests', () => {
 
     render(<PostPage />);
     
-    // Find the post object we expect to be displayed
+    // Find the expected post from the mock data
     const expectedPost = posts.find(p => p.id === 1);
     
     // Assertion 1: Check if the post title is on the screen
     expect(screen.getByRole('heading', { name: expectedPost.title })).toBeInTheDocument();
     
-    // Assertion 2: Check if the post content is on the screen (use a small part of the content)
+    // Assertion 2: Check if the post content is on the screen
     expect(screen.getByText(new RegExp(expectedPost.content.substring(0, 50), 'i'))).toBeInTheDocument();
   });
 
