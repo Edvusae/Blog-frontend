@@ -8,7 +8,7 @@ import posts from '../data/posts.js';
 
 const setup = () => {
   render(
-    // HomePage renders PostCard, which uses <Link>, so it must be wrapped
+    // Wrap HomePage in BrowserRouter to provide routing context
     <BrowserRouter>
       <HomePage />
     </BrowserRouter>
@@ -20,7 +20,7 @@ describe('HomePage Component Tests', () => {
   it('1. Renders the title of every post in the mock data', () => {
     setup();
     
-    // Loop through the mock data and assert that each post's title is present
+    // Iterate through each post in the mocked posts data
     posts.forEach(post => {
       // Assertion: Check that the title text is visible in the document
       const postTitle = screen.getByText(post.title);
@@ -31,10 +31,10 @@ describe('HomePage Component Tests', () => {
   it('2. Renders a "Read More" button for every post', () => {
     setup();
 
-    // Use queryAllByRole to find all elements that act as links/buttons containing the text "Read More"
+    // Query all "Read More" buttons
     const readMoreButtons = screen.queryAllByRole('link', { name: /Read More/i });
     
-    // Assertion: The number of "Read More" buttons should equal the total number of posts
+    // Assertion: The number of "Read More" buttons should equal the number of posts
     expect(readMoreButtons.length).toBe(posts.length);
   });
 });
