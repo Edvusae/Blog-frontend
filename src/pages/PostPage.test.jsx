@@ -1,10 +1,10 @@
-// src/pages/PostPage.test.jsx
-
 import { render, screen } from '@testing-library/react';
 import { expect, it, describe, vi } from 'vitest';
 import PostPage from '../pages/PostPage';
 
-// 1. MOCK THE ENTIRE REACT-ROUTER-DOM MODULE
+// --- MOCKING SETUP ---
+
+// 1. MOCK THE useParams FUNCTION FROM react-router-dom
 vi.mock('react-router-dom', async (importOriginal) => {
   const actual = await importOriginal();
   return {
@@ -14,8 +14,8 @@ vi.mock('react-router-dom', async (importOriginal) => {
   };
 });
 
-// 2. GET THE MOCKED FUNCTION REFERENCE (MUST BE DONE AT MODULE LEVEL)
-// We use vi.mocked to cast the mocked object to a type where mockReturnValue exists
+// 2. GET THE MOCKED useParams FUNCTION
+// Using vi.mocked to get the typed mocked function
 const mockUseParams = vi.mocked(require('react-router-dom').useParams);
 
 // 3. Import the MOCKED posts data (using .js extension)
