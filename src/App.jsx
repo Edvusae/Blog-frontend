@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './components/pages/HomePage';
-import PostPage from './components/pages/PostPage'; // Adjusted the import path for consistency
+import PostPage from './components/pages/PostPage';
 import './App.css';
 
 const App = () => (

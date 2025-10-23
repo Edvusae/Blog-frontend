@@ -8,7 +8,7 @@ import posts from '../data/posts.js';
 
 const setup = () => {
   render(
-    // Wrap HomePage in BrowserRouter to provide routing context
+    // Wrap HomePage with BrowserRouter for routing context
     <BrowserRouter>
       <HomePage />
     </BrowserRouter>
