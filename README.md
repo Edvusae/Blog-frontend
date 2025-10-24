@@ -36,6 +36,18 @@ The application uses a **local mock data file** instead of a live backend, allow
 
 ---
 
+## 🗺️ Project Roadmap (Status: Complete!)
+
+| Status | Feature / Task |
+| :--- | :--- |
+| ✅ **Completed** | Set up initial React/Vite project structure and integrated Bootstrap. |
+| ✅ **Completed** | Finalized **App.jsx** with correct client-side routing (`/`, `/posts/:id`, `/create`). |
+| ✅ **Completed** | Built core components: **Header, PostCard, HomePage, PostPage, and CreatePostPage**. |
+| ✅ **Completed** | Integrated **Vitest** and **React Testing Library** for test environment setup. |
+| ✅ **Completed** | Implemented tests for **Header, HomePage, and App** (routing verification). |
+| ✅ **Completed** | Implemented complex tests for **PostPage** (mocking `useParams`). |
+| ✅ **Completed** | Implemented complex tests for **CreatePostPage** (mocking `axios` and `useNavigate`). |
+
 ## 🚀 Getting Started
 
 Follow these steps to clone and run the project locally.
