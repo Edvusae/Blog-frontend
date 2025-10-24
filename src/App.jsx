@@ -1,8 +1,5 @@
-// src/App.jsx
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// All paths must start with './' to look inside the src directory
 import Header from './components/Header';   
 import HomePage from './pages/HomePage';     
 import PostPage from './pages/PostPage';     
