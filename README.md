@@ -1,30 +1,27 @@
-You've made a great choice by using Bootstrap for your styling. This is a crucial detail to include in your `README.md` to show recruiters your full skill set.
-
-Here is a refactored `README.md` that reflects your decision to use **Bootstrap** and clarifies the project's frontend-only focus.
-
------
-
 # 📝 Frontend Blog Showcase (React-Only)
 
-[](https://github.com/your-repo-link-here)
-[](https://reactjs.org/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR-NETLIFY-ID/deploy-status)](https://YOUR-NETLIFY-APP.netlify.app/)
+[![Tests Passing](https://img.shields.io/badge/Tests-Passing-brightgreen)](./)
+[![React Version](https://img.shields.io/badge/React-v18+-blue)](https://reactjs.org/)
 
 ## 👋 About This Project
 
-This repository contains a **modern, frontend-only blog application** built with React. The primary goal of this project is to showcase core frontend development skills, including **component architecture**, **client-side routing**, and **data manipulation**.
+This repository contains a **modern, frontend-only blog application** built with React. The project's core purpose is to showcase robust frontend development skills, including **component architecture**, **client-side routing**, **data manipulation**, and **comprehensive test automation**.
 
-Instead of relying on a live backend API, the application fetches and displays content from a **local mock data file**, allowing for focused practice on UI and user experience design.
+The application uses a **local mock data file** instead of a live backend, allowing for focused demonstration of UI development, interaction logic, and advanced testing techniques.
+
+---
 
 ## ✨ Key Frontend Skills Practiced
 
-  * **Component Architecture:** Building reusable components for the Post List, Post Card, and Post Detail views.
-  * **Client-Side Routing:** Implementation of **React Router** to manage navigation between the main blog list and individual post pages (`/posts/:id`).
-  * **State Management (Local):** Using React Hooks (`useState`, `useEffect`) to simulate data fetching and manage application state.
-  * **Data Handling:** Importing and manipulating local JavaScript objects (mock data) to render dynamic content.
-  * **Responsive UI:** Styled using the **Bootstrap 5** framework to ensure a clean, modern, and mobile-friendly design.
-  * **Modern Tooling:** Built with **Vite** for a fast and efficient development workflow.
+* **Component Architecture:** Built reusable components for the Header, Post Card, Home Page, and Post Detail views.
+* **Client-Side Routing:** Implemented **React Router** to manage navigation between the main blog list and individual post pages (`/posts/:id`).
+* **Data Handling:** Successfully imported and manipulated local JavaScript objects (mock data) using array methods (`map`, `find`) to render dynamic content.
+* **Responsive UI:** Styled using the **Bootstrap 5** framework to ensure a clean, modern, and mobile-friendly design.
+* **Modern Tooling:** Built with **Vite** for a fast and efficient development workflow.
+* **Comprehensive Testing:** Implemented a full test suite using **Vitest** and **React Testing Library (RTL)** to verify component behavior, form submission logic (with Axios mocking), and correct routing.
 
------
+---
 
 ## 🛠️ Tech Stack
 
@@ -34,8 +31,10 @@ Instead of relying on a live backend API, the application fetches and displays c
 | **Tooling** | **Vite** | Fast development and bundling |
 | **Routing** | **React Router** | Managing client-side navigation |
 | **Styling** | **Bootstrap 5** | Responsive and consistent UI styling |
+| **Testing** | **Vitest / RTL** | Unit and Component testing |
+| **Mocks** | **Axios / JSDOM** | Network and DOM simulation for testing |
 
------
+---
 
 ## 🚀 Getting Started
 
@@ -50,13 +49,13 @@ Ensure you have **Node.js** (which includes npm) installed on your machine.
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://your-repo-link-here.git
+    git clone [https://your-repo-link-here.git](https://your-repo-link-here.git)
     ```
 
 2.  **Navigate to the project directory:**
 
     ```bash
-    cd my-awesome-blog-app
+    cd your-blog-frontend
     ```
 
 3.  **Install dependencies:**
@@ -74,15 +73,9 @@ Ensure you have **Node.js** (which includes npm) installed on your machine.
 5.  **View the application:**
     Open your browser and navigate to `http://localhost:5173` to see the blog live.
 
------
+### Running Tests
 
-## 🗺️ Project Roadmap
+Execute the full testing suite (Unit, Component, and Routing tests):
 
-  * **Completed:** Set up initial React/Vite structure and pushed to GitHub.
-  * **Completed:** Integrated Bootstrap for UI styling.
-  * **Next:** Implement the mock data structure (`src/data/posts.js`).
-  * **Next:** Set up React Router for Home (`/`) and Post Detail (`/posts/:id`) pages.
-  * **Next:** Build the **PostList** component to render data from the local file.
-  * **Next:** Develop the **PostDetail** component to fetch and display a single post based on the URL parameter.
-
-Thanks for checking out the project
+```bash
+npm run test
