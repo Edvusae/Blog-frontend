@@ -66,11 +66,11 @@ describe('CreatePostPage Component Tests', () => {
     // 2d. Assert the Axios request was made correctly
     expect(mockedAxios.post).toHaveBeenCalledTimes(1);
     expect(mockedAxios.post).toHaveBeenCalledWith(
-      'http://localhost:5000/api/posts', // Should match your backend endpoint
-      { title: 'Test Title for Interview', content: 'This is the test content body.' } // The data sent
+      'http://localhost:5000/api/posts', // The API endpoint
+      { title: 'Test Title for Interview', content: 'This is the test content body.' } // The payload
     );
 
-    // 2e. Assert redirection happened after the successful post
+    // 2e. Assert that navigation was called to redirect the user
     // The component should navigate to the home page ('/')
     expect(mockNavigate).toHaveBeenCalledTimes(1);
     expect(mockNavigate).toHaveBeenCalledWith('/');
