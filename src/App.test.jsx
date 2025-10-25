@@ -3,8 +3,8 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { expect, it, describe, vi } from 'vitest';
 import App from './App';
 
-// Mock the child components so we can check if they were rendered
-// We only need to check for the H1 tag on the HomePage and PostPage.
+// Mock versions of the page components to simplify testing
+// These mocks return simple H1 elements with unique text for easy identification
 const MockHomePage = () => <h1>Home Page Content</h1>;
 const MockPostPage = () => <h1>Post Page Content</h1>;
 
@@ -15,7 +15,7 @@ vi.mock('./pages/PostPage', () => ({ default: MockPostPage }));
 vi.mock('./components/Header', () => ({ default: () => <nav>Header Nav</nav> }));
 
 
-// Use a setup function to render App within MemoryRouter for testing routes
+// Helper function to render the App with a specific initial route
 const setup = (initialRoute = '/') => {
   // MemoryRouter simulates the browser's URL bar, allowing us to control the route
   return render(
@@ -26,7 +26,7 @@ const setup = (initialRoute = '/') => {
 };
 
 describe('App Component (Routing) Tests', () => {
-
+// Test case 1: Verify that navigating to the root path ("/") renders the HomePage component
   it('1. Renders the Home Page content when navigating to the root path ("/")', () => {
     setup('/');
     
